@@ -1,15 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Тест</title>
 </head>
+
 <body>
     <nav>
-        <a href="index.html"Return to Main page></a>
+        <a href="index.html"> Return to Main page</a>
     </nav>
-    <h1>HTML Form Sample</h1>
+    <form method="POST" action="https://formspree.io/irinka1369@gmail.com">
+        <fieldset>
+            <legend>Персональна інформація</legend>
+            <p>
+                <label>Стать</label>
+                <label>
+                    <input type="radio" name="gender" value="чол" required>
+                    Чол
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="жін">
+                    Жін
+                </label>
+            </p>
+            <p>
+                <label for="name">Ім'я</label>
+                <input id="name" type="text" required name="user-name">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="user-email" required>
+            </p>
+            <p>
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="user-tel">
+            </p>
+            <p>
+                <label for="country">Країна</label>
+                <select id="country" required="required" name="country">
+                    <option>Україна</option>
+                    <option>США</option>
+                    <option>Польща</option>
+                    <option>Італія</option>
+                    <option>Німеччина</option>
+                    <option>Росія</option>
+                    <option>Великобританія</option>
+                    <option>Канада</option>
+                </select>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" required>
+                    Я згідний з <a href="/terms">умовами використання</a>
+                </label>
+            </p>
+            </fieldset>
+        <fieldset>
+            <legend>
+                Як добре ви розбираєтесь в вині?
+            </legend>
+            <p>
+                1. З якого винограду виготовляють біле вино :<br>
+                <label>
+                    <input type="radio" name="question1"> З суміші білого та червоного
+                </label><br>
+                <label>
+                    <input type="radio" name="question1"> З білого або червоного
+                </label><br>
+                <label>
+                    <input type="radio" name="question1"> Тільки білого
+                </label><br>
+                <label>
+                    <input type="radio" name="question1"> Тільки червоного
+                </label><br>
+            </p>
+            <p>
+                2. До якого блюда найкраще підходить червоне вино :<br>
+                <label>
+                    <input type="checkbox" name="question2"> Закуски
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question2"> Десерт
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question2"> М'ясо
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question2"> Риба
+                </label><br>
+            </p>
+            <p>
+                3. Яке з цих вин прийнято споживати перед прийомом їжі :<br>
+                <label>
+                    <input type="checkbox" name="question3"> Херес
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question3"> Просеко
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question3"> К'янті
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question3"> Марсала
+                </label><br>
+            </p>
+            <p>
+                4. Згідно з етикетом, яке вино охолоджують найбільше :<br>
+                <label>
+                    <input type="radio" name="question4"> Легке біле
+                </label><br>
+                <label>
+                    <input type="radio" name="question4"> Шампанське
+                </label><br>
+                <label>
+                    <input type="radio" name="question4"> Насичене червоне
+                </label><br>
+                <label>
+                    <input type="radio" name="question4"> Легке червоне</label>
+            </p>
+            <p>
+                5. З винограду якого кольору виготовляють рожеве вино :<br>
+                <label>
+                    <input type="checkbox" name="question5"> Червоного
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question5"> Суміші червоного та білого
+                </label><br>
+                <label>
+                    <input type="checkbox" name="question5"> Білого
+                </label><br>
+            </p>
+            </fieldset>
+        <fieldset>
+            <legend>
+                Персональні вподобання
+            </legend>
+            <p>
+                Яке вино ви любите найбільше :<br>
+                <label>
+                    <input type="checkbox" name="favourite-wine"> Червоне
+                </label><br>
+                <label>
+                    <input type="checkbox" name="favourite-wine"> Біле
+                </label><br>
+                <label>
+                    <input type="checkbox" name="favourite-wine"> Рожеве
+                </label><br>
+            </p>
+            <p>
+                <label for="quantity">Скільки разів на тиждень ви вживаєте вино?</label>
+                <input id="quantity" type="number" min="0" max="10" step="1" value="" name="quantity-of-wine">
+            </p>
+            <p>
+                <Label for="dream">Скільки разів на тиждень ви хотіли би вживати вино ?</Label>
+                <input id="dream" type="range" min="0" max="100" step="1" value="50" name="desired-quantity-of-wine">
+                <output for="dream">50</output>
+
+            </p>
+            <p>
+                <label for="date">Коли ви останній раз пили вино ?</label>
+                <input type="date" value="2019-07-19" min="2000-01-01" max="2020-12-31" name="date-of-frinking">
+
+            </p>
+            <p><button value="Відправити ">Відправити</button> <input type="reset" value="Очистити"></p>
+        </fieldset>
+    </form>
 </body>
 </html>
